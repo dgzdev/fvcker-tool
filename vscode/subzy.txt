@@ -1,8 +1,0 @@
-[ * ] Fingerprints found; checking integrity with an upstream
-[ * ] Loaded 5 targets
-[ * ] Loaded 76 fingerprints
-[ No ] HTTPS by default (--https)
-[ 10 ] Concurrent requests (--concurrency)
-[ No ] Check target only if SSL is valid (--verify_ssl)
-[ 10 ] HTTP request timeout (in seconds) (--timeout)
-[ Yes ] Show only potentially vulnerable subdomains (--hide_fails)

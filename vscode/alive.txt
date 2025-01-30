@@ -1,5 +1,0 @@
-https://update.code.visualstudio.com
-https://builds.code.visualstudio.com
-https://errors.code.visualstudio.com
-https://ppe.builds.code.visualstudio.com
-https://tools.code.visualstudio.com
