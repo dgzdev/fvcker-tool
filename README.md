@@ -19,3 +19,14 @@ Now, run the script and be free.
 ```sh
 ./fvcker.sh
 ```
+
+If you need a one step installation, just go:
+```sh
+git clone https://github.com/dgzdev/fvcker-tool.git
+cd fvcker-tool
+chmod +x fvcker.sh
+```
+Then;
+```sh
+./fvcker.sh
+```
