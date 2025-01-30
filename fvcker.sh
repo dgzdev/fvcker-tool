@@ -4,8 +4,8 @@ clear
 
 printf "\e[1;32m \n\n"
 
-printf "Installing resources..."
-printf "Requesting permission..."
+echo "Installing resources..."
+echo "Requesting permission..."
 
 printf "\n"
 
@@ -95,20 +95,36 @@ clear
 printf "Finished!"
 clear
 
-printf "Do you want to see the subdomains? (y/n)"
+printf "Do you want to see the subdomains? (y/n): "
 read -r showSubzy;
 
 clear
 
-printf "Do you want to see the endpoints? (s/n)"
+printf "Do you want to see the endpoints? (y/n): "
 read -r showEndpoints;
 
 clear
 
 if [ "$showSubzy" = "y" ]; then
+    printf "\e[1;0m"
     cat subzy.txt
+    printf "\n"
 fi
 
 if [ "$showEndpoints" = "y" ]; then
+    printf "\e[1;32m"
     cat endpoints.txt
+    printf "\n"
+fi
+
+echo
+echo
+
+printf "Do you want to clear the results? (y/n): "
+read -r delete;
+
+if [ "$delete" = "y" ]; then
+    clear
+    cd ..
+    rm -rf "$nomedoalvo"
 fi
