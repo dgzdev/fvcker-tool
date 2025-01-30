@@ -4,8 +4,8 @@ clear
 
 printf "\e[1;32m \n\n"
 
-printf "Instalando requisitos..."
-printf "Requisitando permissões..."
+printf "Installing resources..."
+printf "Requesting permission..."
 
 printf "\n"
 
