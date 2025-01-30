@@ -44,17 +44,17 @@ echo $sep
 
 printf "\n\e[1;0m"
 echo "Olá $USER, Bem vindo(a) ao FVCKER."
-echo "Ferramenta desenvolvida para agilizar pentest em larga escala."
-echo "Não somos responsáveis por mal uso, ou danos alheios causados pela ferramenta."
+echo "Tool developed to speed up large-scale pentests."
+echo "We are not responsible for misuse or damage caused by the tool."
 printf "\e[1;31m"
  
-printf "\nDigite Nome do Alvo: (Exemplo: google): "
+printf "\nTarget Name: (example: google): "
 
 printf "\e[1;0m"
 read -r nomedoalvo
 printf "\e[1;31m"
 
-printf "\nDigite URL: (Exemplo: google.com): "
+printf "\nTarget URL: (example: google.com): "
 printf "\e[1;0m"
 read -r url;
 printf "\e[1;31m"
@@ -68,7 +68,7 @@ cd "$nomedoalvo" || exit
 clear
 echo $clr
 
-printf "Procurando subdominios..."
+printf "Finding Subdomains..."
 subfinder -d "$url" -o subfinder.txt
 assetfinder --subs-only "$url" | tee -a assetfinder.txt
 
@@ -77,38 +77,38 @@ clear
 # Junta os resultados.
 sort -u subfinder.txt subfinder.txt > domains.txt
 
-printf "Filtrando dominios vivos..."
+printf "Filtering alive domains..."
 httpx-toolkit -l domains.txt -o alive.txt
 
 clear
 
-printf "Buscando endpoints..."
+printf "Looking for endpoints..."
 katana -list alive.txt > endpoints.txt
 
 clear
 
-printf "Procurando subdominios vulneráveis..."
+printf "Finding vulnerable subdomains..."
 subzy run --targets alive.txt --hide_fails > subzy.txt
 
 clear
 
-printf "Finalizado!"
+printf "Finished!"
 clear
 
-printf "Ver subdominios? (s/n)"
+printf "Do you want to see the subdomains? (y/n)"
 read -r showSubzy;
 
 clear
 
-printf "Ver endpoints? (s/n)"
+printf "Do you want to see the endpoints? (s/n)"
 read -r showEndpoints;
 
 clear
 
-if [ "$showSubzy" = "s" ]; then
+if [ "$showSubzy" = "y" ]; then
     cat subzy.txt
 fi
 
-if [ "$showEndpoints" = "s" ]; then
+if [ "$showEndpoints" = "y" ]; then
     cat endpoints.txt
 fi
