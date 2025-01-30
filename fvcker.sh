@@ -43,7 +43,7 @@ echo $sep
 echo $sep
 
 printf "\n\e[1;0m"
-echo "Olá $USER, Bem vindo(a) ao FVCKER."
+echo "Hello $USER, Welcome to FVCKER."
 echo "Tool developed to speed up large-scale pentests."
 echo "We are not responsible for misuse or damage caused by the tool."
 printf "\e[1;31m"
