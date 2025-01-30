@@ -4,7 +4,7 @@
 
 # Installing
 If you dont have git installed:
-(Git Install)[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git]
+[Git Install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 First of all, clone the repo in your machine
 ```git
