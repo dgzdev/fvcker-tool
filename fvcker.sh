@@ -119,6 +119,7 @@ fi
 
 echo
 echo
+printf "\e[1;31m"
 
 printf "Do you want to clear the results? (y/n): "
 read -r delete;
